@@ -2,13 +2,27 @@
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
+html, body, #root {
   min-height: 100%;
+  max-width: 100%;
+  font-family: JetBrains;
+  background-color: rgb(35, 35, 35);
 }
 
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
+@font-face {
+  font-family: "JetBrains";
+  src: url(./assets/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf);
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  background-color: rgb(25 25 25);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 3vw;
 }

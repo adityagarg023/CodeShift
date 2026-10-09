@@ -1,6 +1,8 @@
+import Header from './Components/Header.jsx'
+
 const App = () => {
   return (
-    <h1>CodeShift</h1>
+    <Header/>
   )
 }
 
