@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
   box-sizing: border-box;
 }
@@ -12,17 +14,4 @@ html, body, #root {
 @font-face {
   font-family: "JetBrains";
   src: url(./assets/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf);
-}
-
-header {
-  height: 10vh;
-  width: 100%;
-  color: whitesmoke;
-  display: flex;
-  align-items: center;
-  background-color: rgb(25 25 25);
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0 3vw;
 }
