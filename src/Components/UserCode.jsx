@@ -14,24 +14,23 @@ const monacoLanguages = {
 }
 
 const userCode = () => {
-    const [language, setLanguage] = useState("JavaScript");
+    const [language, setLanguage] = useState("Select Language");
     const [code, setCode] = useState("// Write your code here");
 
     return (
-        <div>
+        <div className='mt-10'>
             <LangSelector
                 language={language}
                 onLanguageChange={setLanguage}
             />
-            <UserCode
-                width="45vw" height="70vh" language={monacoLanguages[language]} theme='vs-dark' value={code}
+            <UserCode className='ml-10 mt-5 mr-10'
+                width="33vw" height="70vh" language={monacoLanguages[language]} theme='vs-dark' value={code}
                 onChange={(value) => setCode(value ?? "")}
                 options={{
                     minimap: { enabled: false },
                     automaticLayout: true,
                     scrollBeyondLastLine: false,
                 }}
-                className='ml-25'
             />
         </div>
     )

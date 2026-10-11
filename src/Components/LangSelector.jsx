@@ -1,4 +1,5 @@
 const languages = [
+  "Select Language",
   "JavaScript",
   "Python",
   "Java",
@@ -14,7 +15,7 @@ const LangSelector = ({ language, onLanguageChange }) => {
     <select
       value={language}
       onChange={(e) => onLanguageChange(e.target.value)}
-      className="text-white bg-[#191919] h-15 w-50 m-10 font-bold"
+      className="text-white bg-[#191919] h-15 w-40 border border-solid border-white appearance-none text-center ml-10"
     >
       {languages.map((lang) => (
         <option key={lang} value={lang}>
