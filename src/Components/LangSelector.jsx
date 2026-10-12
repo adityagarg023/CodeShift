@@ -23,7 +23,7 @@ const LangSelector = ({ language, onLanguageChange }) => {
         </option>
       ))}
     </select>
-  )
-}
+  );
+};
 
-export default LangSelector
+export default LangSelector;
