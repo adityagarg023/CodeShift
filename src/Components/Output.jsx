@@ -2,7 +2,6 @@ import { useState } from "react";
 import { predictOutput } from "../api.js";
 
 const Output = ({ code, language }) => {
-  const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
   const [output, setOutput] = useState("");
   const [error, setError] = useState("");
@@ -11,6 +10,7 @@ const Output = ({ code, language }) => {
     try {
       setLoading(true);
       setError("");
+      setOutput("");
 
       const result = await predictOutput(code, language);
       setOutput(result);
@@ -26,14 +26,16 @@ const Output = ({ code, language }) => {
       <button
         onClick={handleRun}
         disabled={loading}
-        className="text-white h-15 w-30 bg-[#191919] border border-solid border-white text-[2.3vh] font-bold"
+        className="text-white h-15 w-45 bg-[#191919] border border-solid border-white text-[2.3vh] font-bold"
       >
         {loading ? "Running..." : "Run"}
       </button>
+
       <pre className="bg-[#1E1E1E] w-[25vw] h-[68vh] overflow-auto whitespace-pre-wrap p-3 text-white mt-5">
-        {Output}
+        {output}
       </pre>
-      {error && <p>{error}</p>}
+
+      {error && <p className="text-red-500">{error}</p>}
     </div>
   );
 };

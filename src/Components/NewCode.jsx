@@ -1,6 +1,5 @@
-import NewCode from "@monaco-editor/react";
+import MonacoEditor from "@monaco-editor/react";
 import LangSelector from "./LangSelector.jsx";
-import { useState } from "react";
 
 const monacoLanguages = {
   JavaScript: "javascript",
@@ -13,16 +12,14 @@ const monacoLanguages = {
   Rust: "rust",
 };
 
-const newCode = () => {
-  const [language, setLanguage] = useState("Select Language");
-  const [code, setCode] = useState("// Write your code here");
-
+const NewCode = ({ code, setCode, language, setLanguage }) => {
   return (
     <div className="mt-10">
       <div className="flex justify-end">
         <LangSelector language={language} onLanguageChange={setLanguage} />
       </div>
-      <NewCode
+
+      <MonacoEditor
         className="ml-20 mt-5"
         width="33vw"
         height="70vh"
@@ -40,4 +37,4 @@ const newCode = () => {
   );
 };
 
-export default newCode;
+export default NewCode;
