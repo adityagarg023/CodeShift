@@ -10,7 +10,7 @@ app = FastAPI(title="CodeShift API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://code-shift-lilac.vercel.app",
+        "https://codeshift-ai-code-translator.vercel.app",
         "http://localhost:5173",
     ],
     allow_credentials=True,
